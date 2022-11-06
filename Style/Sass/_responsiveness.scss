@@ -1,0 +1,69 @@
+@media screen and (max-width: 768px) {
+  .bottom-heading,
+  .registration-top-side,
+  .top-heading,
+  .main-top,
+  .main-bottom,
+  .main-bottom-right,
+  footer {
+    @include flexDirectionMobile;
+  }
+
+  .header-left-side {
+    text-align: center;
+  }
+
+  .header-right-side {
+    margin-top: 4rem;
+  }
+
+  .registration-top-side {
+    gap: 1rem;
+  }
+
+  button {
+    width: 80%;
+  }
+
+  .top-heading {
+    gap: 3rem;
+
+    & li {
+      font-size: 1.5rem;
+
+      &:nth-child(2) {
+        padding: 10px;
+      }
+    }
+  }
+
+  .main-bottom {
+    gap: 5rem;
+    padding: 5rem 1rem;
+  }
+
+  .main-bottom-right {
+    width: 100%;
+
+    & input {
+      width: 80%;
+    }
+  }
+
+  .main-left-side {
+    padding: 1rem;
+  }
+
+  footer {
+    align-items: flex-start;
+  }
+
+  .footer-right {
+    align-self: center;
+  }
+
+  div.card {
+    width: 20rem;
+    height: 16rem;
+  }
+}

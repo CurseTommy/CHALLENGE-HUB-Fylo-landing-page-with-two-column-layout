@@ -1,0 +1,130 @@
+main {
+  margin-top: 5rem;
+}
+
+.main-top {
+  @include displayFlex(center, center, row);
+  background-color: $light-grayish-blue;
+  margin-top: -5px;
+  gap: 3rem;
+  padding-bottom: 7rem;
+}
+
+.main-left-side {
+  padding-left: 4rem;
+  & h1 {
+    @include h1Size;
+  }
+
+  & p {
+    font-size: 1.05rem;
+    margin: 2rem 0;
+  }
+}
+
+.p-link {
+  cursor: pointer;
+  width: fit-content;
+  color: $moderate-cyan;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    top: 10%;
+    padding-left: 5px;
+    content: url(/images/icon-arrow.svg);
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5%;
+    width: calc(100% + 20px);
+    height: 1px;
+    background-color: $moderate-cyan;
+  }
+
+  &:hover {
+    filter: brightness(140%);
+  }
+}
+
+.main-right-side {
+  padding-right: 4rem;
+}
+
+.card {
+  background-color: white;
+  width: 25rem;
+  height: 14rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  @include boxShadow();
+
+  & p {
+    margin: 0.2rem 0;
+  }
+}
+
+.quote {
+  width: 7%;
+}
+
+.author {
+  margin-top: 1.5rem;
+  @include displayFlex(flex-start, center, row);
+}
+
+.author-avatar {
+  width: 10%;
+
+  & img {
+    border-radius: 50%;
+  }
+}
+
+.author-description {
+  padding-left: 1rem;
+
+  & p {
+    font-size: 0.8rem;
+  }
+
+  & p:nth-child(1) {
+    font-weight: bold;
+  }
+}
+
+.main-bottom {
+  @include displayFlex(space-between, center, row);
+  gap: 300px;
+  padding: 6rem 4rem;
+  background-color: $desaturated-blue;
+  color: white;
+}
+
+.main-bottom-left {
+  width: 60%;
+
+  & h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+}
+
+.main-bottom-right {
+  @include displayFlex(center, flex-start, column);
+  gap: 1rem;
+  width: 40%;
+
+  & input {
+    @include inputButtonHeight;
+    width: 30vw;
+    padding: 1rem 0rem 0.6rem 1rem;
+  }
+
+  & button {
+    margin-left: 0;
+  }
+}

@@ -1,0 +1,47 @@
+@mixin displayFlex($justify, $align, $direction) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
+}
+
+@mixin flexDirectionMobile {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin inputButtonHeight {
+  height: 2.8rem;
+}
+
+@mixin button {
+  @include inputButtonHeight;
+  margin-left: 1rem;
+  width: 15rem;
+  border: none;
+  background-color: $bright-blue;
+  color: white;
+  font-size: 0.9rem;
+  border-radius: 0.3rem;
+  @include boxShadow();
+  cursor: pointer;
+
+  &:hover {
+    filter: brightness(130%);
+  }
+}
+
+@mixin h1Size {
+  font-size: 3rem;
+  font-family: "Raleway", sans-serif;
+}
+
+@mixin paragraph {
+  font-size: 1.2rem;
+  margin: 1.5rem 0;
+}
+
+@mixin boxShadow {
+  box-shadow: 1px 2px 3px 0px hsla(100%, 0, 0, 30%);
+}

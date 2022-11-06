@@ -1,0 +1,53 @@
+header {
+  padding: 4rem;
+}
+
+.top-heading {
+  @include displayFlex(space-between, center, row);
+}
+
+ul {
+  & li {
+    list-style-type: none;
+    display: inline;
+    cursor: pointer;
+  }
+
+  & li:nth-child(2) {
+    padding: 0 4rem;
+  }
+}
+
+.bottom-heading {
+  @include displayFlex(center, center, row);
+  margin-top: 6rem;
+}
+
+.header-left-side {
+  & h1 {
+    @include h1Size;
+  }
+
+  & p {
+    @include paragraph;
+  }
+}
+
+.registration-top-side {
+  display: flex;
+
+  & input {
+    @include inputButtonHeight;
+    width: 23rem;
+    padding: 1rem 0rem 0.6rem 1rem;
+
+    &::placeholder {
+      color: $light-gray;
+      font-size: 1rem;
+    }
+  }
+}
+
+button {
+  @include button;
+}

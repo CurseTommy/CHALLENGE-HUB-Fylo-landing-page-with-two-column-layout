@@ -1,0 +1,19 @@
+@import "_mixins";
+@import "_variables";
+@import "_reset";
+
+// Layout
+
+@import "Layout/header";
+@import "Layout/main";
+@import "Layout/footer";
+@import "_responsiveness";
+
+body {
+  font-family: "Open Sans", sans-serif;
+  height: 100vh;
+}
+
+img {
+  width: 100%;
+}
